@@ -73,7 +73,7 @@ static int geevon_callback(r_device *decoder, bitbuffer_t *bitbuffer)
         return DECODE_FAIL_MIC;
     }
 
-    // // Verify CRC checksum
+    // Verify CRC checksum
     // uint8_t chk = crc8(b, 9, 0x31, 0x7b);
     // if (chk) {
     //     return DECODE_FAIL_MIC;
