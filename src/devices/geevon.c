@@ -73,11 +73,11 @@ static int geevon_callback(r_device *decoder, bitbuffer_t *bitbuffer)
         return DECODE_FAIL_MIC;
     }
 
-    // Verify CRC checksum
-    uint8_t chk = crc8(b, 9, 0x31, 0x7b);
-    if (chk) {
-        return DECODE_FAIL_MIC;
-    }
+    // // Verify CRC checksum
+    // uint8_t chk = crc8(b, 9, 0x31, 0x7b);
+    // if (chk) {
+    //     return DECODE_FAIL_MIC;
+    // }
 
     // Extract the data from the packet
     int battery_low = (b[1] >> 7);              // 0x00: battery good, 0x80: battery low
